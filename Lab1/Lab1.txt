@@ -1,0 +1,62 @@
+EXERCISE 1
+	104.18.60.21
+	104.18.61.21
+	172.67.219.46
+	Having multiple IP addresses means the website can handle high traffic.
+
+EXERCISE 2	
+	HOST					REACHABLE	NOTES
+	www.unsw.edu.au			YES
+	www.getfittest.com.au	NO			Not a valid web address
+	www.mit.edu				YES
+	www.intel.com.au		YES
+	www.tpg.com.au			YES
+	www.hola.hp				NO			.hp isn't a valid domain suffix
+	www.amazon.com			YES
+	www.tsinghua.edu.cn		YES
+	www.kremlin.ru			NO			The kremlin site might have increased security on the site to avoid cyber attacks as it is a government website
+	8.8.8.8					YES
+
+EXERCISE 3
+	1.	Columbia Trace: columbiaTraceroute.txt
+	
+		Number of routers: 22
+		Number on UNSW network: 5
+		Crosses pacfic ocean: between 7 and 9. Router 8 is in Hawaii (IP address: 113.197.15.99)
+
+	2.	UCLA Trace: uclaTraceroute.txt
+		Tokyo Trace: tokyoTraceroute.txt
+		Lancaster Trace: lancasterTraceroute.txt
+
+		The routes diverge after router 3 which is within the UNSW network. However they rejoin at the aarnet router (IP address: 138.44.5.0) which is located in Kensington. 
+
+	3.	i)	Singapore to UNSW Trace: sinToUnswTraceroute.txt
+			UNSW to Singapore Trace: unswToSinTraceroute.txt
+
+			IP Address for Singapore: 202.150.221.170
+		
+		ii)	Telstra to UNSW Trace: telstraToUnswTraceroute.txt
+			UNSW to Telstra: unswToTelstraTraceroute.txt
+
+			IP Address for Telstra: 203.50.5.178
+
+		Yes, there are common routers in the forward and reverse routes in both traces however the same IP addresses are not observed. 			This is likely due to the fact there are dedicated input and output interfaces in the routers to deal with incoming and outgoing traces.
+
+EXERCISE 4
+
+	1.	Distance to Brisbane: 913km, Time: 0.00304s
+		Distance to Manilla: 6270km, Time: 0.0209s
+		Distance to Berlin: 16090km, Time: 0.5363s
+
+	2.	No the delays are not constant because there can be queueing in the various routers used, resulting in delays that may not occur at other times. 
+
+	3.	Not in Switzerland.
+
+	4.	Processing and transmission delays depend on packet size while queueing and propogation delays do not.
+
+
+
+		
+
+		
+

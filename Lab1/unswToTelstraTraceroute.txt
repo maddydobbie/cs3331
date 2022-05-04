@@ -1,0 +1,15 @@
+traceroute to 203.50.5.178 (203.50.5.178), 30 hops max, 60 byte packets
+ 1  cserouter1-server.cse.unsw.EDU.AU (129.94.242.251)  0.113 ms  0.085 ms  0.060 ms
+ 2  129.94.39.17 (129.94.39.17)  0.822 ms  0.864 ms  0.862 ms
+ 3  ombudnex1-vl-3154.gw.unsw.edu.au (149.171.253.35)  1.486 ms libudnex1-vl-3154.gw.unsw.edu.au (149.171.253.34)  1.403 ms ombudnex1-vl-3154.gw.unsw.edu.au (149.171.253.35)  1.469 ms
+ 4  libcr1-po-5.gw.unsw.edu.au (149.171.255.165)  1.084 ms libcr1-po-6.gw.unsw.edu.au (149.171.255.201)  1.162 ms ombcr1-po-5.gw.unsw.edu.au (149.171.255.197)  1.121 ms
+ 5  unswbr1-te-1-9.gw.unsw.edu.au (149.171.255.101)  1.265 ms unswbr1-te-2-13.gw.unsw.edu.au (149.171.255.105)  1.269 ms unswbr1-te-1-9.gw.unsw.edu.au (149.171.255.101)  1.338 ms
+ 6  138.44.5.0 (138.44.5.0)  1.246 ms  1.343 ms  1.282 ms
+ 7  et-1-1-0.pe1.rsby.nsw.aarnet.net.au (113.197.15.12)  1.613 ms  1.652 ms  1.697 ms
+ 8  xe-0-0-3.bdr1.rsby.nsw.aarnet.net.au (113.197.15.31)  1.616 ms  1.481 ms  1.424 ms
+ 9  HundredGigE0-1-0-4.ken-edge903.sydney.telstra.net (139.130.0.77)  2.305 ms  2.146 ms  2.299 ms
+10  bundle-ether17.ken-core10.sydney.telstra.net (203.50.11.172)  3.302 ms bundle-ether2.chw-edge903.sydney.telstra.net (203.50.11.175)  3.176 ms  3.101 ms
+11  bundle-ether17.chw-core10.sydney.telstra.net (203.50.11.176)  3.895 ms bundle-ether10.win-core10.melbourne.telstra.net (203.50.11.123)  13.855 ms bundle-ether17.chw-core10.sydney.telstra.net (203.50.11.176)  3.768 ms
+12  203.50.6.40 (203.50.6.40)  16.215 ms  16.198 ms  15.626 ms
+13  bundle-ether2.exi-ncprouter101.melbourne.telstra.net (203.50.11.209)  13.362 ms  13.546 ms  13.042 ms
+14  www.telstra.net (203.50.5.178)  12.733 ms  12.581 ms  12.615 ms

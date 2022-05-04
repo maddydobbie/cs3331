@@ -1,0 +1,25 @@
+EXERCISE 3
+	1. Status code: 200 
+	   Phrase: OK
+	2. Last-Modified: Tue, 23 Sep 2003 05:29:00 GMT
+	   Yes, also contains date section which is different to last modified by 50 seconds.
+	   Date represents when the response first originated
+	   Last Modified represents when the file was last modified.
+	3. It is persistent because the of the line: Connection: Keep-Alive.
+	   For non-persistent it would be: Connections: Keep-Alive
+	   Also, in HTTP/1.1 the connection is persistent by default unless you add the "Connection: close".
+	4. 73 bytes
+	5. <html>\n
+			Congratulations.  You've downloaded the file lab2-1.html!\n
+	   <html>\n
+
+EXERCISE 4
+	1. No
+	2. Yes, Last-Modified: Tue, 23 Sep 2003 05:35:00 GMT
+	3. Yes, If-Modified-Since: Tue, 23 Sep 2003 05:35:00 GMT
+	   Yes, If-None-Match: "1bfef-173-8f4ae900"
+	4. Status Code: 304
+	   Phrase: Not Modified
+	   No the server didn't return the contents of the file because of the if-modified tag. the file wasn't modified after the date in the if-modified tag so the response sent an error message.
+	5. ETag: "1bfef-173-8f4ae900"
+	   The ETag response header is an identifier for a specific version of a resource. As the file has not changed since the last response, the ETag value has also not changed.

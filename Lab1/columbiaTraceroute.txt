@@ -1,0 +1,23 @@
+traceroute to www.columbia.edu (128.59.105.24), 30 hops max, 60 byte packets
+ 1  cserouter1-server.cse.unsw.EDU.AU (129.94.242.251)  0.078 ms  0.053 ms  0.053 ms
+ 2  129.94.39.17 (129.94.39.17)  0.891 ms  0.870 ms  0.844 ms
+ 3  ombudnex1-vl-3154.gw.unsw.edu.au (149.171.253.35)  1.329 ms libudnex1-vl-3154.gw.unsw.edu.au (149.171.253.34)  1.486 ms  1.485 ms
+ 4  ombcr1-po-6.gw.unsw.edu.au (149.171.255.169)  1.148 ms  1.148 ms  1.162 ms
+ 5  unswbr1-te-1-9.gw.unsw.edu.au (149.171.255.101)  1.151 ms unswbr1-te-2-13.gw.unsw.edu.au (149.171.255.105)  1.133 ms unswbr1-te-1-9.gw.unsw.edu.au (149.171.255.101)  1.153 ms
+ 6  138.44.5.0 (138.44.5.0)  1.275 ms  1.272 ms  1.251 ms
+ 7  et-1-3-0.pe1.sxt.bkvl.nsw.aarnet.net.au (113.197.15.149)  2.244 ms  2.099 ms  2.083 ms
+ 8  et-0-0-0.pe1.a.hnl.aarnet.net.au (113.197.15.99)  95.198 ms  95.117 ms  95.104 ms
+ 9  et-2-1-0.bdr1.a.sea.aarnet.net.au (113.197.15.201)  146.968 ms  146.923 ms  146.915 ms
+10  abilene-1-lo-jmb-706.sttlwa.pacificwave.net (207.231.240.8)  159.840 ms  159.800 ms  159.800 ms
+11  ae-1.4079.rtsw.minn.net.internet2.edu (162.252.70.173)  192.628 ms  192.620 ms  192.683 ms
+12  ae-1.4079.rtsw.eqch.net.internet2.edu (162.252.70.106)  201.155 ms  201.160 ms  201.181 ms
+13  ae-0.4079.rtsw3.eqch.net.internet2.edu (162.252.70.163)  200.283 ms  205.113 ms  201.505 ms
+14  ae-1.4079.rtsw.clev.net.internet2.edu (162.252.70.130)  209.775 ms  210.363 ms  209.720 ms
+15  buf-9208-I2-CLEV.nysernet.net (199.109.11.33)  213.264 ms  213.286 ms  213.270 ms
+16  syr-9208-buf-9208.nysernet.net (199.109.7.193)  217.183 ms  217.396 ms  217.346 ms
+17  nyc111-9204-syr-9208.nysernet.net (199.109.7.94)  226.413 ms  226.317 ms  226.366 ms
+18  nyc-9208-nyc111-9204.nysernet.net (199.109.7.165)  225.796 ms  225.715 ms  225.838 ms
+19  columbia.nyc-9208.nysernet.net (199.109.4.14)  290.208 ms  281.910 ms  230.101 ms
+20  cc-core-1-x-nyser32-gw-1.net.columbia.edu (128.59.255.5)  226.788 ms  226.747 ms  226.747 ms
+21  cc-conc-1-x-cc-core-1.net.columbia.edu (128.59.255.21)  226.069 ms  225.941 ms  226.025 ms
+22  gutenberg-e.org (128.59.105.24)  225.904 ms  225.913 ms  225.868 ms

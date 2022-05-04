@@ -1,0 +1,203 @@
+EXERCISE 3
+
+	1.	IP Address: 23.185.0.1
+		Type: A
+
+		Output from command:
+		; <<>> DiG 9.9.5-9+deb8u19-Debian <<>> www.eecs.berkeley.edu
+		;; global options: +cmd
+		;; Got answer:
+		;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 39133
+		;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 4, ADDITIONAL: 8
+
+		;; OPT PSEUDOSECTION:
+		; EDNS: version: 0, flags:; udp: 4096
+		;; QUESTION SECTION:
+		;www.eecs.berkeley.edu.		IN	A
+
+		;; ANSWER SECTION:
+		www.eecs.berkeley.edu.	34455	IN	CNAME	live-eecs.pantheonsite.io.
+		live-eecs.pantheonsite.io. 170	IN	CNAME	fe1.edge.pantheon.io.
+		fe1.edge.pantheon.io.	185	IN	A	23.185.0.1
+
+		;; AUTHORITY SECTION:
+		edge.pantheon.io.	185	IN	NS	ns-1213.awsdns-23.org.
+		edge.pantheon.io.	185	IN	NS	ns-644.awsdns-16.net.
+		edge.pantheon.io.	185	IN	NS	ns-2013.awsdns-59.co.uk.
+		edge.pantheon.io.	185	IN	NS	ns-233.awsdns-29.com.
+
+		;; ADDITIONAL SECTION:
+		ns-233.awsdns-29.com.	119154	IN	A	205.251.192.233
+		ns-644.awsdns-16.net.	64361	IN	A	205.251.194.132
+		ns-644.awsdns-16.net.	63238	IN	AAAA	2600:9000:5302:8400::1
+		ns-1213.awsdns-23.org.	62613	IN	A	205.251.196.189
+		ns-1213.awsdns-23.org.	62613	IN	AAAA	2600:9000:5304:bd00::1
+		ns-2013.awsdns-59.co.uk. 63233	IN	A	205.251.199.221
+		ns-2013.awsdns-59.co.uk. 56867	IN	AAAA	2600:9000:5307:dd00::1
+
+		;; Query time: 0 msec
+		;; SERVER: 129.94.242.45#53(129.94.242.45)
+		;; WHEN: Tue Jun 30 02:29:06 AEST 2020
+		;; MSG SIZE  rcvd: 425
+
+	2.	Canocial name: live-eecs.pantheonsite.io
+		Reason: Multiple domain names can map to the same IP for accessability
+				meaning the site is easily accessed in multiple ways
+
+	3.	Authority: Tells us what servers are the authority for answering DNS 
+					queries about the queried domain.
+		Additional: Provides any extra information that may be wanted but not
+					specifically requested by dig. In this example, the additional
+					section gives the IP addresses for the authoritative servers
+
+	4.	IP Address: 129.94.242.45
+
+	5.	NAME SERVER					TYPE		IP ADDRESS
+		ns.CS.berkeley.edu.			A			169.229.60.61
+		ns.eecs.berkeley.edu.		A			169.229.60.153
+		adns1.berkeley.edu.			A			128.32.136.3
+		adns1.berkeley.edu.			AAAA		2607:f140:ffff:fffe::3
+		adns2.berkeley.edu.			A			128.32.136.14
+		adns2.berkeley.edu.			AAAA		2607:f140:ffff:fffe::e
+		adns3.berkeley.edu.			A			192.107.102.142
+		adns3.berkeley.edu.			AAAA		2607:f140:a000:d::abc
+
+
+		Output from new dig command (no www):
+		; <<>> DiG 9.9.5-9+deb8u19-Debian <<>> eecs.berkeley.edu
+		;; global options: +cmd
+		;; Got answer:
+		;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 32081
+		;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 5, ADDITIONAL: 9
+
+		;; OPT PSEUDOSECTION:
+		; EDNS: version: 0, flags:; udp: 4096
+		;; QUESTION SECTION:
+		;eecs.berkeley.edu.		IN	A
+
+		;; ANSWER SECTION:
+		eecs.berkeley.edu.	75711	IN	A	23.185.0.1
+
+		;; AUTHORITY SECTION:
+		eecs.berkeley.edu.	40660	IN	NS	ns.CS.berkeley.edu.
+		eecs.berkeley.edu.	40660	IN	NS	ns.eecs.berkeley.edu.
+		eecs.berkeley.edu.	40660	IN	NS	adns1.berkeley.edu.
+		eecs.berkeley.edu.	40660	IN	NS	adns3.berkeley.edu.
+		eecs.berkeley.edu.	40660	IN	NS	adns2.berkeley.edu.
+
+		;; ADDITIONAL SECTION:
+		ns.CS.berkeley.edu.	32208	IN	A	169.229.60.61
+		ns.eecs.berkeley.edu.	61491	IN	A	169.229.60.153
+		adns1.berkeley.edu.	9141	IN	A	128.32.136.3
+		adns1.berkeley.edu.	4392	IN	AAAA	2607:f140:ffff:fffe::3
+		adns2.berkeley.edu.	9141	IN	A	128.32.136.14
+		adns2.berkeley.edu.	9141	IN	AAAA	2607:f140:ffff:fffe::e
+		adns3.berkeley.edu.	7976	IN	A	192.107.102.142
+		adns3.berkeley.edu.	7976	IN	AAAA	2607:f140:a000:d::abc
+
+		;; Query time: 0 msec
+		;; SERVER: 129.94.242.45#53(129.94.242.45)
+		;; WHEN: Tue Jun 30 03:05:18 AEST 2020
+		;; MSG SIZE  rcvd: 323
+
+	6.	webserver.seecs.nust.edu.pk
+		Type: PTR
+
+		Output:
+		; <<>> DiG 9.9.5-9+deb8u19-Debian <<>> -x 111.68.101.54
+		;; global options: +cmd
+		;; Got answer:
+		;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 54274
+		;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 2, ADDITIONAL: 3
+
+		;; OPT PSEUDOSECTION:
+		; EDNS: version: 0, flags:; udp: 4096
+		;; QUESTION SECTION:
+		;54.101.68.111.in-addr.arpa.	IN	PTR
+
+		;; ANSWER SECTION:
+		54.101.68.111.in-addr.arpa. 2920 IN	PTR	webserver.seecs.nust.edu.pk.
+
+		;; AUTHORITY SECTION:
+		101.68.111.in-addr.arpa. 5143	IN	NS	ns2.hec.gov.pk.
+		101.68.111.in-addr.arpa. 5143	IN	NS	ns1.hec.gov.pk.
+
+		;; ADDITIONAL SECTION:
+		ns1.hec.gov.pk.		2920	IN	A	103.4.93.5
+		ns2.hec.gov.pk.		265	IN	A	103.4.93.6
+
+		;; Query time: 0 msec
+		;; SERVER: 129.94.242.45#53(129.94.242.45)
+		;; WHEN: Tue Jun 30 03:22:00 AEST 2020
+		;; MSG SIZE  rcvd: 172
+
+	7.	No, there is no aa flag (authoritative answer).
+
+		Output:
+		; <<>> DiG 9.9.5-9+deb8u19-Debian <<>> @129.94.242.33 yahoo.com
+		; (1 server found)
+		;; global options: +cmd
+		;; Got answer:
+		;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 20408
+		;; flags: qr rd ra; QUERY: 1, ANSWER: 6, AUTHORITY: 5, ADDITIONAL: 10
+
+		;; OPT PSEUDOSECTION:
+		; EDNS: version: 0, flags:; udp: 4096
+		;; QUESTION SECTION:
+		;yahoo.com.			IN	A
+
+		;; ANSWER SECTION:
+		yahoo.com.		1681	IN	A	98.138.219.231
+		yahoo.com.		1681	IN	A	98.138.219.232
+		yahoo.com.		1681	IN	A	72.30.35.9
+		yahoo.com.		1681	IN	A	72.30.35.10
+		yahoo.com.		1681	IN	A	98.137.246.7
+		yahoo.com.		1681	IN	A	98.137.246.8
+
+		;; AUTHORITY SECTION:
+		yahoo.com.		50315	IN	NS	ns3.yahoo.com.
+		yahoo.com.		50315	IN	NS	ns2.yahoo.com.
+		yahoo.com.		50315	IN	NS	ns4.yahoo.com.
+		yahoo.com.		50315	IN	NS	ns1.yahoo.com.
+		yahoo.com.		50315	IN	NS	ns5.yahoo.com.
+
+		;; ADDITIONAL SECTION:
+		ns1.yahoo.com.		200700	IN	A	68.180.131.16
+		ns1.yahoo.com.		50315	IN	AAAA	2001:4998:130::1001
+		ns2.yahoo.com.		118719	IN	A	68.142.255.16
+		ns2.yahoo.com.		31378	IN	AAAA	2001:4998:140::1002
+		ns3.yahoo.com.		932	IN	A	27.123.42.42
+		ns3.yahoo.com.		932	IN	AAAA	2406:8600:f03f:1f8::1003
+		ns4.yahoo.com.		28417	IN	A	98.138.11.157
+		ns5.yahoo.com.		24940	IN	A	202.165.97.53
+		ns5.yahoo.com.		24785	IN	AAAA	2406:2000:ff60::53
+
+		;; Query time: 0 msec
+		;; SERVER: 129.94.242.33#53(129.94.242.33)
+		;; WHEN: Tue Jun 30 03:30:05 AEST 2020
+		;; MSG SIZE  rcvd: 416
+
+
+	8.	This time the stutus is refused
+		
+		Output:
+		; <<>> DiG 9.9.5-9+deb8u19-Debian <<>> @169.229.60.61 yahoo.com
+		; (1 server found)
+		;; global options: +cmd
+		;; Got answer:
+		;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 41966
+		;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+		;; WARNING: recursion requested but not available
+
+		;; OPT PSEUDOSECTION:
+		; EDNS: version: 0, flags:; udp: 4096
+		;; QUESTION SECTION:
+		;yahoo.com.			IN	A
+
+		;; Query time: 167 msec
+		;; SERVER: 169.229.60.61#53(169.229.60.61)
+		;; WHEN: Tue Jun 30 03:35:49 AEST 2020
+		;; MSG SIZE  rcvd: 38
+
+	10.	Yes	
+

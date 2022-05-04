@@ -1,0 +1,21 @@
+EXERCISE 1
+	RESOURCE RECORD			FUNCTION
+	A						eturns a IPv4 address for the domain name
+	CNAME					Returns alias of the domain name
+	MX						Returns the mail server for that domain name
+	NS						Returns the name server information for 
+							the domain name	
+	PTR						Returns a pointer to a CNAME
+	SOA						Returns information on the name servers used
+
+EXERCISE 2
+	1.	UPD: User Datagram Protocol
+	2.	Query
+			Src: 3742
+			Dest: 53
+		Response
+			Src: 53
+			Dest: 3742
+	3.	128.238.29.22
+	4.	1 question, Type: A 	
+	5.	
